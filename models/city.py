@@ -1,15 +1,18 @@
 #!/usr/bin/python3
+"""
+Defines the City class
+"""
+from models.base_model import BaseModel
 
-"""Module city
-Contains class City that inherits from BaseModel"""
-from models import base_model
 
+class City(BaseModel):
+    """Represent a city
 
-class City(base_model.BaseModel):
-    """Defines a city where AirBnB places can be found in a State"""
+    Attributes:
+        state_id (str): The state id.
+        name (str): The name of the city
+
+    """
+
     state_id = ""
     name = ""
-
-    def __init__(self, *args, **kwargs):
-        """Initializes just like it's parent class BaseModel does"""
-        super().__init__(*args, **kwargs)

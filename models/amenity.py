@@ -1,14 +1,15 @@
 #!/usr/bin/python3
+"""
+Module for Amenity class
+"""
+from models.base_model import BaseModel
 
-"""Module amenity
-Contains class Amenity that inherits from BaseModel"""
-from models import base_model
 
+class Amenity(BaseModel):
+    """Custom amenity class
 
-class Amenity(base_model.BaseModel):
-    """Defines the amenity of a Place in AirBnB"""
+    Attributes:
+        name(str): amenity name
+
+    """
     name = ""
-
-    def __init__(self, *args, **kwargs):
-        """Initializes just like it's parent class BaseModel does"""
-        super().__init__(*args, **kwargs)

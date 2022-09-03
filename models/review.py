@@ -1,16 +1,19 @@
 #!/usr/bin/python3
+"""
+Defines the Review class.
+"""
+from models.base_model import BaseModel
 
-"""Module review
-Contains class Amenity that inherits from BaseModel"""
-from models import base_model
 
+class Review(BaseModel):
+    """Represent a review
 
-class Review(base_model.BaseModel):
-    """Defines the review a user makes for a place"""
+    Attributes:
+        place_id (str): The Place id
+        user_id (str): The User id
+        text (str): The text of the review
+
+    """
     place_id = ""
     user_id = ""
     text = ""
-
-    def __init__(self, *args, **kwargs):
-        """Initializes just like it's parent class BaseModel does"""
-        super().__init__(*args, **kwargs)

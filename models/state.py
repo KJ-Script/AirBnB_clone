@@ -1,14 +1,15 @@
 #!/usr/bin/python3
+"""
+Defines the State class
+"""
+from models.base_model import BaseModel
 
-"""Module state
-Contains class State that inherits from BaseModel"""
-from models import base_model
 
+class State(BaseModel):
+    """Represent a state
 
-class State(base_model.BaseModel):
-    """Defines a state where AirBnB places can be found"""
+    Attributes:
+        name (str): The name of the state
+
+    """
     name = ""
-
-    def __init__(self, *args, **kwargs):
-        """Initializes just like it's parent class BaseModel does"""
-        super().__init__(*args, **kwargs)
